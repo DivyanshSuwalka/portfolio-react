@@ -2,8 +2,6 @@
 
 A modern, responsive portfolio website built with **React** and **Tailwind CSS**, featuring dark/light theme support and smooth animations. Bundled with **Parcel** for fast development and optimized builds.
 
-![Portfolio Preview](https://portfolio-react-lldf.vercel.app/)
-
 ## ✨ Features
 
 - **Modern React**: Built with React 18 and functional components
