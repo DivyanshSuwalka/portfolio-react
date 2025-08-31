@@ -1,8 +1,8 @@
-import React from 'react';
-import { resumeData } from '../../data/resume';
-import Button from '../ui/Button';
-import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
-import { scrollToSection } from '../../utils/helpers';
+import React from "react";
+import { resumeData } from "../../data/resume";
+import Button from "../ui/Button";
+import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { scrollToSection } from "../../utils/helpers";
 
 const Hero = () => {
   return (
@@ -21,81 +21,54 @@ const Hero = () => {
           <div className="space-y-8 text-center lg:text-left animate-fade-in">
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white">
-                Hi, I'm{' '}
-                <span className="text-gradient">
-                  {resumeData.personal.name}
-                </span>
+                Hi, I'm{" "}
+                <span className="text-gradient">Divyansh</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 font-light">
                 {resumeData.personal.title}
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
-                {resumeData.personal.professionalSummary}
+                {resumeData.personal.summary}
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                variant="gradient" 
-                size="lg"
-                onClick={() => scrollToSection('projects')}
-                className="font-semibold"
-              >
+              <Button variant="gradient" size="lg" onClick={() => scrollToSection("projects")} className="font-semibold">
                 View My Work
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => scrollToSection('contact')}
-                className="font-semibold"
-              >
+              <Button variant="outline" size="lg" onClick={() => scrollToSection("contact")} className="font-semibold">
                 Get In Touch
               </Button>
             </div>
 
             {/* Social Links */}
             <div className="flex justify-center lg:justify-start space-x-4">
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => window.open(resumeData.personal.github, '_blank')}
-                className="p-3 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400"
-                aria-label="GitHub Profile"
-              >
+              <Button variant="ghost" size="sm" onClick={() => window.open(resumeData.personal.github, "_blank")} className="p-3 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400" aria-label="GitHub Profile">
                 <Github className="h-6 w-6" />
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => window.open(resumeData.personal.linkedin, '_blank')}
-                className="p-3 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400"
-                aria-label="LinkedIn Profile"
-              >
+              <Button variant="ghost" size="sm" onClick={() => window.open(resumeData.personal.linkedin, "_blank")} className="p-3 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400" aria-label="LinkedIn Profile">
                 <Linkedin className="h-6 w-6" />
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => window.location.href = `mailto:${resumeData.personal.email}`}
-                className="p-3 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400"
-                aria-label="Send Email"
-              >
+              <Button variant="ghost" size="sm" onClick={() => (window.location.href = `mailto:${resumeData.personal.email}`)} className="p-3 hover:bg-blue-100 dark:hover:bg-blue-900 hover:text-blue-600 dark:hover:text-blue-400" aria-label="Send Email">
                 <Mail className="h-6 w-6" />
               </Button>
             </div>
           </div>
 
-          {/* Right Side - Profile Image Placeholder */}
+          {/* Right Side - Profile Avatar */}
           <div className="flex justify-center lg:justify-end animate-slide-up">
             <div className="relative">
               <div className="w-80 h-80 relative">
-                {/* Profile Image Placeholder with DS */}
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 p-1 animate-float">
-                  <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-                    <div className="text-6xl font-bold text-gray-600 dark:text-gray-300 font-mono">
+                {/* Beautiful gradient avatar with initials */}
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500 p-1 animate-float shadow-2xl">
+                  <div className="w-full h-full rounded-full bg-gradient-to-br from-blue-600 via-purple-700 to-pink-600 flex items-center justify-center relative overflow-hidden">
+                    {/* Initials */}
+                    <div className="text-8xl font-bold text-white font-mono tracking-wider">
                       DS
                     </div>
+                    {/* Subtle pattern overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent"></div>
                   </div>
                 </div>
 
@@ -116,11 +89,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <button
-            onClick={() => scrollToSection('about')}
-            className="animate-bounce text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2"
-            aria-label="Scroll to About section"
-          >
+          <button onClick={() => scrollToSection("about")} className="animate-bounce text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors p-2" aria-label="Scroll to About section">
             <ChevronDown className="h-8 w-8" />
           </button>
         </div>

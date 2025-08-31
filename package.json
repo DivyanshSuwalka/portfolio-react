@@ -4,10 +4,10 @@
   "description": "Modern React Portfolio with Tailwind CSS and Theme Support",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel src/index.html --dist-dir dist --public-url /",
+    "build": "parcel build src/index.html --dist-dir dist --public-url /",
     "clean": "rimraf dist .parcel-cache",
-    "dev": "parcel --open"
+    "dev": "parcel src/index.html --dist-dir dist --public-url /"
   },
   "keywords": [
     "react",

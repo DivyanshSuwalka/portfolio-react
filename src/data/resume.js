@@ -1,14 +1,14 @@
 export const resumeData = {
   personal: {
     name: "Divyansh Suwalka",
-    title: "Frontend Engineer",
+    title: "Full-Stack Engineer",
     email: "suwalkadivyansh63@gmail.com",
     phone: "+91-9057868307",
     linkedin: "https://www.linkedin.com/in/divyansh-suwalka/",
     github: "https://github.com/DivyanshSuwalka",
     location: "India",
-    summary: "Creative Full-Stack JavaScript Engineer with 1+ years turning ideas into fast, responsive web experiences. I craft pixel-perfect React/Tailwind front-ends, build secure Node/Express APIs, and optimize SQL/NoSQL data layers for lightning-quick performance (site speed ↑ 55%). Adept at CI/CD, TypeScript, and Next.js SSR, I thrive in cross-functional teams—solving problems end-to-end and shipping code that delights users and scales with demand.",
-    professionalSummary: "Frontend Developer with 1+ year building responsive, high-performance web apps in React JS. Boosted site speed by 55%. Skilled in API integration, mobile-first design, and NodeJS-based backends; eager to contribute as a full-stack engineer while leading on the frontend."
+    summary: "Frontend heavy Full-Stack JavaScript Engineer with over 1 year building scalable, high-performance web apps in React.js, Proficient in state management tools build secure Node/Express APIs, and optimize SQL/NoSQL data layers for lightning-quick performance (site speed ↑ 55%) and experienced in both monolithic and microservices architecture. Adept at CI/CD, TypeScript, and Next.js SSR, Dedicated to delivering high-quality code, ownership end-to-end and scale with demand.",
+    professionalSummary: "Frontend Developer with 1+ year building responsive, high-performance web apps in React JS. Boosted site speed by 55%. Skilled in API integration, mobile-first design, and NodeJS-based backends; eager to contribute as a full-stack engineer while leading on the frontend. "
   },
 
   skills: {
