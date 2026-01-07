@@ -225,7 +225,7 @@ const Contact = () => {
                   <Button
                     variant="outline"
                     size="lg"
-                    onClick={() => window.open("/resume.pdf", "_blank")}
+                    onClick={() => window.open("https://drive.google.com/file/d/1C6OpnffLaZY-d-E548K3C5MoUqvZamPs/view?usp=sharing", "_blank")}
                     className="w-full"
                   >
                     📄 Download Resume
