@@ -1,8 +1,8 @@
-import React from 'react';
-import { Card, CardContent } from '../ui/Card';
-import Badge from '../ui/Badge';
-import { resumeData } from '../../data/resume';
-import { Building, MapPin, Calendar, CheckCircle } from 'lucide-react';
+import React from "react";
+import { Card, CardContent } from "../ui/Card";
+import Badge from "../ui/Badge";
+import { resumeData } from "../../data/resume";
+import { Building, MapPin, Calendar, CheckCircle } from "lucide-react";
 
 const Experience = () => {
   return (
@@ -13,7 +13,8 @@ const Experience = () => {
             Work Experience
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            My professional journey and key accomplishments in frontend development
+            My professional journey and key accomplishments in frontend
+            development
           </p>
         </div>
 
@@ -23,16 +24,22 @@ const Experience = () => {
 
           <div className="space-y-12">
             {resumeData.experience.map((exp, index) => (
-              <div key={index} className={`relative flex items-center ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              }`}>
+              <div
+                key={index}
+                className={`relative flex items-center ${
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
+              >
                 {/* Timeline Dot */}
                 <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white dark:border-gray-800 shadow-lg z-10"></div>
 
                 {/* Experience Card */}
-                <div className={`w-full md:w-1/2 ml-16 md:ml-0 ${
-                  index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
-                } animate-fade-in`} style={{ animationDelay: `${index * 0.2}s` }}>
+                <div
+                  className={`w-full md:w-1/2 ml-16 md:ml-0 ${
+                    index % 2 === 0 ? "md:pr-12" : "md:pl-12"
+                  } animate-fade-in`}
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
                   <Card hover className="p-6">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
@@ -55,7 +62,7 @@ const Experience = () => {
                           </span>
                         </div>
                       </div>
-                      <Badge 
+                      <Badge
                         variant={index === 0 ? "success" : "secondary"}
                         size="sm"
                       >
@@ -65,38 +72,60 @@ const Experience = () => {
 
                     {/* Responsibilities */}
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Key Achievements:</h4>
+                      <h4 className="font-semibold text-gray-900 dark:text-white">
+                        Key Achievements:
+                      </h4>
                       <ul className="space-y-3">
-                        {exp.responsibilities.map((responsibility, respIndex) => (
-                          <li key={respIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                            <span className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                              {responsibility}
-                            </span>
-                          </li>
-                        ))}
+                        {exp.responsibilities.map(
+                          (responsibility, respIndex) => (
+                            <li
+                              key={respIndex}
+                              className="flex items-start space-x-3"
+                            >
+                              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                              <span className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                                {responsibility}
+                              </span>
+                            </li>
+                          )
+                        )}
                       </ul>
                     </div>
 
                     {/* Tech Stack for each role */}
                     <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                      <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">Technologies Used:</p>
+                      <p className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+                        Technologies Used:
+                      </p>
                       <div className="flex flex-wrap gap-2">
-                        {index === 0 ? (
-                          // Current role technologies
-                          ['React.js', 'Tailwind CSS', 'TypeScript', 'Next.js', 'Docker', 'GitHub Actions'].map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="skill" size="sm">
-                              {tech}
-                            </Badge>
-                          ))
-                        ) : (
-                          // Previous role technologies
-                          ['React.js', 'HTML5', 'CSS3', 'Bootstrap', 'Node.js', 'MySQL', 'PostgreSQL'].map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="tech" size="sm">
-                              {tech}
-                            </Badge>
-                          ))
-                        )}
+                        {index === 0
+                          ? // Current role technologies
+                            [
+                              "Node.js",
+                              "AWS S3",
+                              "TypeScript",
+                              "RESTful backend",
+                              "MySQL",
+                              "Express.js",
+                            ].map((tech, techIndex) => (
+                              <Badge key={techIndex} variant="skill" size="sm">
+                                {tech}
+                              </Badge>
+                            ))
+                          : // Previous role technologies
+                            [
+                              "React.js",
+                              "HTML5",
+                              "CSS3",
+                              "Bootstrap",
+                              "Node.js",
+                              "MySQL",
+                              "PostgreSQL",
+                            ].map((tech, techIndex) => (
+                              <Badge key={techIndex} variant="tech" size="sm">
+                                {tech}
+                              </Badge>
+                            ))}
                       </div>
                     </div>
                   </Card>
@@ -109,16 +138,34 @@ const Experience = () => {
         {/* Experience Summary Stats */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <Card className="text-center p-6 animate-fade-in">
-            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1+</div>
-            <p className="text-gray-600 dark:text-gray-400 font-medium">Years Experience</p>
+            <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+              2+
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 font-medium">
+              Years Experience
+            </p>
           </Card>
-          <Card className="text-center p-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">2</div>
-            <p className="text-gray-600 dark:text-gray-400 font-medium">Companies</p>
+          <Card
+            className="text-center p-6 animate-fade-in"
+            style={{ animationDelay: "0.1s" }}
+          >
+            <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
+              3
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 font-medium">
+              Companies
+            </p>
           </Card>
-          <Card className="text-center p-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">10+</div>
-            <p className="text-gray-600 dark:text-gray-400 font-medium">Projects Completed</p>
+          <Card
+            className="text-center p-6 animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+              10+
+            </div>
+            <p className="text-gray-600 dark:text-gray-400 font-medium">
+              Projects Completed
+            </p>
           </Card>
         </div>
       </div>

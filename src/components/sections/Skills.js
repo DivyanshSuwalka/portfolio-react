@@ -13,7 +13,7 @@ const Skills = () => {
       color: "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300",
     },
     {
-      title: "Frameworks & Libraries",
+      title: "Frameworks / Libraries",
       icon: Layers,
       items: resumeData.skills.frameworks,
       color:
@@ -27,7 +27,7 @@ const Skills = () => {
         "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300",
     },
     {
-      title: "Tools & Technologies",
+      title: "Developer Tools / Cloud",
       icon: Settings,
       items: resumeData.skills.tools,
       color:
@@ -180,10 +180,10 @@ const Skills = () => {
             {[
               { skill: "Frontend Development", percentage: 90 },
               { skill: "React Ecosystem", percentage: 85 },
-              { skill: "JavaScript/ES6+", percentage: 80 },
-              { skill: "CSS/Tailwind", percentage: 85 },
-              { skill: "Backend Development", percentage: 70 },
-              { skill: "Database Design", percentage: 65 },
+              { skill: "JavaScript/ES6+", percentage: 90 },
+              { skill: "CSS/Tailwind", percentage: 80 },
+              { skill: "Backend Development", percentage: 85 },
+              { skill: "Database Design", percentage: 80 },
             ].map((item, index) => (
               <div key={index} className="space-y-2">
                 <div className="flex justify-between text-sm">
